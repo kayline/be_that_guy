@@ -1,0 +1,6 @@
+<h1>All Active Challenges</h1>
+<ul>
+	<% @challenges.each do |c| %>
+		<li><%= link_to c, "c.title" %></li>
+		<% end %>
+</ul>
