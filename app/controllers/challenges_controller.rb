@@ -5,7 +5,7 @@ class ChallengesController < ApplicationController
 	end
 
 	def show
-		@challenge = Challenges.find(params[:challenge_id])
+		@challenge = Challenge.find(params[:id])
 	end
 
 	def new
@@ -13,7 +13,7 @@ class ChallengesController < ApplicationController
 	end
 
 	def create
-		@challenge = Challenge.new(params[:challenge])
+		@challenge = Challenge.new(challenge_params)
 		if @challenge.save
 			redirect_to @challenge
 		else
@@ -29,6 +29,11 @@ class ChallengesController < ApplicationController
 	def update
 		@challenge = Challenges.find(params[:challenge_id])
 	end
+
+	private
+  def challenge_params
+    params.require(:challenge).permit(:title, :description, :value, :level)
+  end
 
 
 end
