@@ -1,0 +1,13 @@
+<h1>New Challenge</h1>
+
+<%= form_for @challenge, :url =>'/admin/challenges/create' do |f| %>
+<%= f.label :title %><br />
+<%= f.text_field :title %><br /><br />
+<%= f.label :description %><br />
+<%= f.text_area :description %><br /><br />
+<%= f.label :value, "Point Value (integer)" %><br />
+<%= f.text_field :value %><br /><br />
+<%= f.label :level, "Difficulty Level" %><br />
+<%= f.text_field :level %><br /><br />
+<%=f.submit "Create Challenge" %>
+<% end %> 
