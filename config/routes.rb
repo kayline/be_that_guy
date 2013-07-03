@@ -7,6 +7,9 @@ BeThatGuy::Application.routes.draw do
   post '/admin/challenges/create' => 'challenges#create'
   get '/admin/challenges/:challenge_id/edit' => 'challenges#edit'
   post '/admin/challenges/:challenge_id/update' => 'challenges#update'
+  post '/login', :to => 'sessions#create'
+  get '/logout', :to => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
