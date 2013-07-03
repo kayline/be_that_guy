@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20130625005557) do
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
-    t.integer  "points"
+    t.integer  "points",          default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
