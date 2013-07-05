@@ -3,6 +3,7 @@ BeThatGuy::Application.routes.draw do
 
   resources :challenges, :only => [:index, :show]
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :users
   get '/admin/challenges/new' => 'challenges#new'
   post '/admin/challenges/create' => 'challenges#create'
   get '/admin/challenges/:challenge_id/edit' => 'challenges#edit'
