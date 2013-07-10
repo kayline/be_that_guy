@@ -1,0 +1,11 @@
+<ul class='nav topnav'>
+	<% if current_user %>
+		<li><%= link_to("Profile", current_user) %></li>
+		<li><%= link_to("Logout", logout_path) %></li>
+	<% else %>
+		<li><%= link_to("Home", root_path) %></li>
+		<li><%= link_to("Login", root_path) %></li>
+		<li><%= link_to("Create Account", root_path) %></li>
+	<% end %>
+
+</ul>
