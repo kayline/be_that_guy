@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
 	def new
 		@user = User.new
-		render 'users/login'
+		render 'shared/home'
 	end
 
   def create
