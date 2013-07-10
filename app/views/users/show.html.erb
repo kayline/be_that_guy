@@ -1,3 +1,20 @@
 <h1>Profile Page</h1>
 
 <h3><%= @user.username %></h3>
+
+<h4>Current Challenges</h4>
+<ul>
+	<% @user.challenges.each do |chal| %>
+		<li><%= link_to("#{chal.title}", chal) %></li>
+		<ul>
+			<li><%= link_to("Complete", complete_challenge_path(chal)) %></li>
+		</ul>
+	<% end %>
+</ul>
+
+<h4>Accept a New Challenge</h4>
+<ul>
+	<% @user.available_challenges.each do |chal| %>
+		<li><%= link_to("#{chal.title}", chal) %></li>
+	<% end %>
+</ul>
