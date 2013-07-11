@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 	def available_challenges
 		# eventually dependent on user point level
-		Challenge.where(:level => 0)
+		Challenge.where("level <= ?", self.points/10)
 	end
 
 end
