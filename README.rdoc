@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application uses a simple gamification interface to provide users with concrete steps they can take to make their organization more welcoming to women, minorities, or other marginalized groups.
 
-Things you may want to cover:
+Each user has a profile that tracks their progress using points. Users can choose from an array of challenges, each with it's own task and point value. Completing challenges earns you points, and opens up more difficult challenges.
 
-* Ruby version
+Note: THIS IS A WORK IN PROGRESS. To date there is basic user creation and sign in, users can complete active challenges but not add new ones, challenge creation is not restricted to admins, etc. Also, there's no styling yet of any kind.
 
-* System dependencies
+Code Details:
 
-* Configuration
+* Ruby 2.0, Rails 4
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database: PostgreSQL
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
